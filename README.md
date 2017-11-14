@@ -1,4 +1,4 @@
-**Note: This is original README.md of Udacity Oauth project file!
+**Warning: This is original README.md of Udacity Oauth project file. I will update my own README.md later on!
 # OAuth2.0
 Starter Code for Auth&amp;Auth course
 # Installing the Vagrant VM for ud330 - Authentication & Authorization
