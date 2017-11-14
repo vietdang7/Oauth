@@ -22,9 +22,10 @@ session = DBSession()
 @app.route('/login')
 def showLogin():
     state = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in xrange(32))
-    # Store state token in the session for later validation
+    #Store state token in the session for later validation
     login_session['state'] = state
-    return "The current session state is %s" %login_session['state']
+    #Render login page
+    return render_template('login.html', STATE=state)
 
 #JSON APIs to view Restaurant Information
 @app.route('/restaurant/<int:restaurant_id>/menu/JSON')
