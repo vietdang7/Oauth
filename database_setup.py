@@ -5,6 +5,17 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
+
+class User(Base):
+    __tablename__ = 'user'
+
+
+    name = Column(String(80), nullable = False)
+    id = Column(Integer, primary_key = True)
+    email = Column(String(80), nullable = False)
+    picture = Column(String(250))
+
+
 class Restaurant(Base):
     __tablename__ = 'restaurant'
 
@@ -50,18 +61,11 @@ class MenuItem(Base):
        }
 
 
-class User(Base):
-    __tablename__ = 'user'
-
-
-    name = Column(String(80), nullable = False)
-    id = Column(Integer, primary_key = True)
-    email = Column(String(80), nullable = False)
-    picture = Column(String(250))
 
 
 
-engine = create_engine('sqlite:///restaurantmenu.db')
+
+engine = create_engine('sqlite:///restaurantmenuwithusers.db')
 
 
 Base.metadata.create_all(engine)
