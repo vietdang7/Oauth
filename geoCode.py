@@ -10,3 +10,5 @@ def getGeocodeLocation(inputString):
     result = json.loads(content)
     print "response header: %s \n \n" % response
     return result
+
+getGeocodeLocation("Viet Nam")
